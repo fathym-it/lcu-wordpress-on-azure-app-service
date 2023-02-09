@@ -1,0 +1,15 @@
+{
+  "name": "@fathym-it/lcu-wordpress-on-azure-app-service",
+  "version": "0.0.0",
+  "description": "@fathym-it/lcu-wordpress-on-azure-app-service",
+  "author": "Fathym, Inc",
+  "main": "lcu.json",
+  "scripts": {
+    "deploy": "npx fathym git && npm version patch && npm publish --access public && npx fathym git"
+  },
+  "keywords": [
+    "lowcodeunit",
+    "lcu"
+  ],
+  "license": "MIT"
+}

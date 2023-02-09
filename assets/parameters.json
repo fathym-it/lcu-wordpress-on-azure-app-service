@@ -1,0 +1,32 @@
+{
+  "AZURE_CLOUD_LOOKUP": {
+    "type": "eac:env:clouds|select"
+  },
+  "RESOURCE_NAME": [
+    {
+      "type": "eac:env:clouds:groups|select",
+      "optional": true,
+      "AZURE_CLOUD_LOOKUP": "cloudLookup"
+    },
+    {
+      "type": "input",
+      "message": "Enter a name for your alfresco cloud resources"
+    }
+  ],
+  "DB_SERVER_USERNAME": {
+    "type": "input",
+    "message": "Enter a username for your DB server"
+  },
+  "DB_SERVER_PASSWORD": {
+    "type": "input",
+    "message": "Enter a password for your DB server"
+  },
+  "WORDPRESS_USERNAME": {
+    "type": "input",
+    "message": "Enter an admin username for your Wordpress"
+  },
+  "WORDPRESS_PASSWORD": {
+    "type": "input",
+    "message": "Enter an admin password for your Wordpress"
+  }
+}

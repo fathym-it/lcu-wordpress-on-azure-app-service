@@ -1,0 +1,32 @@
+{
+  "Applications": {},
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Clouds": {
+        "{{AZURE_CLOUD_LOOKUP}}": {
+          "ResourceGroups": {
+            "{{RESOURCE_NAME}}": {
+              "Name": "{{RESOURCE_NAME}}",
+              "Description": "{{RESOURCE_NAME}}",
+              "Details": {
+                "Type": "Format",
+                "Template": {
+                  "Parameters": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/wordpress-on-app-service/parameters.json",
+                  "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/wordpress-on-app-service/template.json"
+                },
+                "Data": {
+                  "RESOURCE_NAME": "{{RESOURCE_NAME}}",
+                  "DB_SERVER_USERNAME": "{{DB_SERVER_USERNAME}}",
+                  "DB_SERVER_PASSWORD": "{{DB_SERVER_PASSWORD}}",
+                  "WORDPRESS_USERNAME": "{{WORDPRESS_USERNAME}}",
+                  "WORDPRESS_PASSWORD": "{{WORDPRESS_PASSWORD}}"
+                },
+                "Outputs": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
