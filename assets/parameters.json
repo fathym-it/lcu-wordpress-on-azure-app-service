@@ -14,11 +14,11 @@
     }
   ],
   "DB_SERVER_USERNAME": {
-    "type": "password",
+    "type": "input",
     "message": "Enter a username for your DB server"
   },
   "DB_SERVER_PASSWORD": {
-    "type": "input",
+    "type": "password",
     "message": "Enter a password for your DB server"
   },
   "WORDPRESS_ADMIN_EMAIL": {
