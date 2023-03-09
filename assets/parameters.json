@@ -17,10 +17,6 @@
     "type": "password",
     "message": "Enter a password for your DB server"
   },
-  "WORDPRESS_ADMIN_EMAIL": {
-    "type": "input",
-    "message": "Enter an admin email for your Wordpress"
-  },
   "WORDPRESS_PASSWORD": {
     "type": "password",
     "message": "Enter an admin password for your Wordpress"
