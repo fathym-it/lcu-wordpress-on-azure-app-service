@@ -1,6 +1,6 @@
 {
   "name": "@fathym-it/lcu-wordpress-on-azure-app-service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@fathym-it/lcu-wordpress-on-azure-app-service",
   "author": "Fathym, Inc",
   "main": "lcu.json",
