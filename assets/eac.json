@@ -18,6 +18,7 @@
                   "RESOURCE_NAME": "{{RESOURCE_NAME}}",
                   "DB_SERVER_USERNAME": "{{DB_SERVER_USERNAME}}",
                   "DB_SERVER_PASSWORD": "{{DB_SERVER_PASSWORD}}",
+                  "WORDPRESS_ADMIN_EMAIL": "{{WORDPRESS_ADMIN_EMAIL}}",
                   "WORDPRESS_USERNAME": "{{WORDPRESS_USERNAME}}",
                   "WORDPRESS_PASSWORD": "{{WORDPRESS_PASSWORD}}"
                 },
