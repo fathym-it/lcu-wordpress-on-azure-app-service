@@ -1,5 +1,23 @@
 {
-  "Applications": {},
+  "Applications": {
+    "alfresco-admin": {
+      "Application": {
+        "Description": "Wordpress Site",
+        "Name": "Wordpress Site"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "LowCodeUnit": {
+        "SPARoot": "https://{{RESOURCE_NAME}}.azurewebsites.net/",
+        "Type": "SPA"
+      },
+      "Processor": {
+        "InboundPath": "/",
+        "Type": "Proxy"
+      }
+    }
+  },
   "Environments": {
     "$#.PrimaryEnvironment": {
       "Clouds": {
