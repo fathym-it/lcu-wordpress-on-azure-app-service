@@ -10,15 +10,15 @@
     },
     {
       "type": "input",
-      "message": "Enter a name for your Wordpress cloud resources"
+      "message": "Create a name for your Wordpress cloud resources"
     }
   ],
   "DB_SERVER_PASSWORD": {
     "type": "password",
-    "message": "Enter a password for your DB server"
+    "message": "Create a password for your DB server"
   },
   "WORDPRESS_PASSWORD": {
     "type": "password",
-    "message": "Enter an admin password for your Wordpress"
+    "message": "Create an admin password for your Wordpress"
   }
 }
