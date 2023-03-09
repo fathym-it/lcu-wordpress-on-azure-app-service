@@ -13,10 +13,6 @@
       "message": "Enter a name for your Wordpress cloud resources"
     }
   ],
-  "DB_SERVER_USERNAME": {
-    "type": "input",
-    "message": "Enter a username for your DB server"
-  },
   "DB_SERVER_PASSWORD": {
     "type": "password",
     "message": "Enter a password for your DB server"
@@ -24,10 +20,6 @@
   "WORDPRESS_ADMIN_EMAIL": {
     "type": "input",
     "message": "Enter an admin email for your Wordpress"
-  },
-  "WORDPRESS_USERNAME": {
-    "type": "input",
-    "message": "Enter an admin username for your Wordpress"
   },
   "WORDPRESS_PASSWORD": {
     "type": "password",
