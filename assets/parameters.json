@@ -14,7 +14,7 @@
     }
   ],
   "DB_SERVER_USERNAME": {
-    "type": "input",
+    "type": "password",
     "message": "Enter a username for your DB server"
   },
   "DB_SERVER_PASSWORD": {
@@ -30,7 +30,7 @@
     "message": "Enter an admin username for your Wordpress"
   },
   "WORDPRESS_PASSWORD": {
-    "type": "input",
+    "type": "password",
     "message": "Enter an admin password for your Wordpress"
   }
 }
