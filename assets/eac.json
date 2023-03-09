@@ -34,6 +34,7 @@
                 },
                 "Data": {
                   "RESOURCE_NAME": "{{RESOURCE_NAME}}",
+                  "$Username": "{{$Username}}",
                   "DB_SERVER_USERNAME": "fathym",
                   "DB_SERVER_PASSWORD": "{{DB_SERVER_PASSWORD}}",
                   "WORDPRESS_PASSWORD": "{{WORDPRESS_PASSWORD}}"
