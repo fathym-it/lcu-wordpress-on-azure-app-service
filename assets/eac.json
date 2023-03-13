@@ -6,14 +6,14 @@
         "Name": "Wordpress Site"
       },
       "LookupConfig": {
-        "PathRegex": "/wordpress.*"
+        "PathRegex": "/.*"
       },
       "LowCodeUnit": {
         "SPARoot": "https://{{RESOURCE_NAME}}.azurewebsites.net/",
         "Type": "SPA"
       },
       "Processor": {
-        "InboundPath": "/wordpress",
+        "InboundPath": "/",
         "Type": "Proxy"
       }
     },
@@ -23,7 +23,7 @@
         "Name": "Headless Wordpress Gatsby Starter - Forked Recipe"
       },
       "LookupConfig": {
-        "PathRegex": "/.*"
+        "PathRegex": "/starter.*"
       },
       "LowCodeUnit": {
         "SourceControlLookup": "fork|github://fathym-it/gatsby-headless-wordpress-starter",
@@ -32,7 +32,7 @@
         "Type": "GitHub"
       },
       "Processor": {
-        "BaseHref": "/",
+        "BaseHref": "/starter",
         "DefaultFile": "index.html",
         "Type": "DFS"
       }
