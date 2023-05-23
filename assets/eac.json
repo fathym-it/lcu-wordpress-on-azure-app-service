@@ -53,7 +53,7 @@
                   "Content": "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/templates/fathym/wordpress-on-app-service/template.json"
                 },
                 "Data": {
-                  "RESOURCE_NAME": "{{RESOURCE_NAME}}",
+                  "RESOURCE_NAME": "{{alphanumlower RESOURCE_NAME}}",
                   "$Username": "{{$Username}}",
                   "DB_SERVER_USERNAME": "fathym",
                   "DB_SERVER_PASSWORD": "{{DB_SERVER_PASSWORD}}",
