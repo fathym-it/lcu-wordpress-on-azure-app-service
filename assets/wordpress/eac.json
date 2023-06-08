@@ -47,7 +47,7 @@
     }
   },
   "Environments": {
-    "$#.PrimaryEnvironment": {
+    "{{EaC.PrimaryEnvironment}}": {
       "Clouds": {
         "{{AZURE_CLOUD_LOOKUP}}": {
           "ResourceGroups": {
