@@ -1,40 +1,48 @@
 {
   "Applications": {
-    "alfresco-admin": {
-      "Application": {
+    "{{$1}}-wordpress-site": {
+      "Details": {
         "Description": "Wordpress Site",
         "Name": "Wordpress Site"
       },
       "LookupConfig": {
         "PathRegex": "/.*"
       },
-      "LowCodeUnit": {
-        "SPARoot": "https://{{RESOURCE_NAME}}.azurewebsites.net/",
-        "Type": "SPA"
+      "Package": {
+        "Details": {
+          "SPARoot": "https://{{RESOURCE_NAME}}.azurewebsites.net/"
+        },
+        "Type": "SPALowCodeUnit"
       },
       "Processor": {
-        "InboundPath": "/",
-        "Type": "Proxy"
+        "Details": {
+          "InboundPath": "/"
+        },
+        "Type": "ProxyProcessor"
       }
     },
-    "gatsby-starter": {
-      "Application": {
+    "{{$2}}-gatsby-starter": {
+      "Details": {
         "Description": "A starting point for a headless wordpress Gatsby",
         "Name": "Headless Wordpress Gatsby Starter - Forked Recipe"
       },
       "LookupConfig": {
         "PathRegex": "/starter.*"
       },
-      "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/gatsby-headless-wordpress-starter",
-        "Build": "latest",
-        "Path": "lcu-github-artifacts-release.yml",
-        "Type": "GitHub"
+      "Package": {
+        "Details": {
+          "Build": "latest",
+          "Path": "lcu-github-plasmic-artifacts-release.yml"
+        },
+        "SourceControlLookup": "github://{{ORGANIZATION}}/landing-page-alfresco-launchpad",
+        "Type": "GitHubLowCodeUnit"
       },
       "Processor": {
-        "BaseHref": "/starter",
-        "DefaultFile": "index.html",
-        "Type": "DFS"
+        "Details": {
+          "BaseHref": "/starter",
+          "DefaultFile": "index.html"
+        },
+        "Type": "DFSProcessor"
       }
     }
   },
@@ -67,36 +75,50 @@
       },
       "Artifacts": {
         "gatsby-build-release": {
-          "Name": "Gatsby Build/Release",
-          "Output": "./public",
-          "Type": "GitHub",
-          "BuildCommand": "npm run build",
-          "InstallCommand": "npm ci",
-          "NPMRegistry": "https://registry.npmjs.org/"
+          "Type": "GitHubArtifact",
+          "Details": {
+            "Name": "Gatsby Build/Release",
+            "Output": "./public",
+            "BuildCommand": "npm run build",
+            "InstallCommand": "npm ci",
+            "NPMRegistry": "https://registry.npmjs.org/"
+          }
         }
       },
       "DevOpsActions": {
         "github-artifacts-release-gatsby": {
-          "Name": "GitHub Artifacts - Release - Gatsby",
-          "Path": "lcu-github-artifacts-release.yml",
           "ArtifactLookups": ["gatsby-build-release"],
-          "Templates": [
-            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
-            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
-          ]
+          "Details": {
+            "Name": "GitHub Artifacts - Release - Gatsby",
+            "Path": "lcu-github-artifacts-release.yml",
+            "Templates": [
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+            ]
+          }
         }
       },
       "Sources": {
         "fork|github://fathym-it/gatsby-headless-wordpress-starter": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-gatsby"],
-          "Branches": ["main"],
-          "MainBranch": "main",
-          "Organization": "fathym-it",
-          "Repository": "gatsby-headless-wordpress-starter",
-          "Name": "github://fathym-it/gatsby-headless-wordpress-starter",
-          "Type": "GitHub"
+          "Details": {
+            "Branches": ["main"],
+            "MainBranch": "main",
+            "Organization": "{{ORGANIZATION}}",
+            "Repository": "gatsby-headless-wordpress-starter",
+            "Name": "github://{{ORGANIZATION}}/gatsby-headless-wordpress-starter"
+          },
+          "Type": "GitHubSourceControl"
         }
       }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": [
+        "{{$1}}-wordpress-site",
+        "{{$2}}-gatsby-starter"
+      ]
     }
   }
 }

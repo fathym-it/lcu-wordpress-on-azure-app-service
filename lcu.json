@@ -4,6 +4,24 @@
     "Description": "An LCU for installing Wordpress into an Azure App Service.",
     "Image": "https://s.w.org/about/images/logos/wordpress-logo-stacked-rgb.png",
     "PreviewImage": "https://s.w.org/about/images/logos/wordpress-logo-stacked-rgb.png",
-    "UsesGit": true
+    "Intents":[
+      "Wordpress",
+      "Getting started",
+      "Website",
+      "Application"
+    ]
+  },
+  "Configurations": {
+    "Full": {
+      "Name": "Wordpress on Azure App Service",
+      "Description": "An LCU for installing Wordpress into an Azure App Service.",
+      "Phases": [
+        {
+          "Name": "Setup Wordpress on Azure App Service",
+          "Order": 1,
+          "Asset": "wordpress"
+        }
+      ]
+    }
   }
 }

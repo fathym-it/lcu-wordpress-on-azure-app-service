@@ -1,0 +1,64 @@
+{
+  "PROJECT_LOOKUP": {
+    "Order": 1,
+    "Prompts": [
+      {
+        "Type": "eac:projects|select",
+        "Message": "Choose the project to deploy the Alfresco Starter to?",
+        "Arguments": {
+          "CreateText": "Create a project"
+        }
+      }
+    ]
+  },
+  "ORGANIZATION": {
+    "Order": 2,
+    "Prompts": [
+      {
+        "Type": "git:organizations|select",
+        "Message": "Which organization would you like to fork code into?"
+      }
+    ]
+  },
+  "AZURE_CLOUD_LOOKUP": {
+    "Order": 3,
+    "Prompts": [
+      {
+        "type": "eac:env:clouds|select",
+        "Message": "Which Azure Cloud would you like to deploy into?"
+      }
+    ]
+  },
+  "RESOURCE_NAME": {
+    "Order": 4,
+    "Prompts": [
+      {
+        "type": "eac:env:clouds:groups|select",
+        "optional": true,
+        "AZURE_CLOUD_LOOKUP": "cloudLookup"
+      },
+      {
+        "type": "input",
+        "message": "Create a name for your Wordpress cloud resources"
+      }
+    ]
+  },
+  "DB_SERVER_PASSWORD": {
+    "Order": 5,
+    "Prompts": [
+      {
+        "type": "password",
+        "message": "Create a password for your DB server"
+      }
+    ]
+  },
+  "WORDPRESS_PASSWORD": {
+    "Order": 6,
+    "Prompts": [
+      {
+        "type": "password",
+        "message": "Create an admin password for your Wordpress"
+      }
+    ]
+  }
+}
