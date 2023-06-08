@@ -32,9 +32,9 @@
       "Package": {
         "Details": {
           "Build": "latest",
-          "Path": "lcu-github-plasmic-artifacts-release.yml"
+          "Path": "lcu-github-artifacts-release.yml"
         },
-        "SourceControlLookup": "github://{{ORGANIZATION}}/landing-page-alfresco-launchpad",
+        "SourceControlLookup": "github://{{ORGANIZATION}}/gatsby-headless-wordpress-starter",
         "Type": "GitHubLowCodeUnit"
       },
       "Processor": {
