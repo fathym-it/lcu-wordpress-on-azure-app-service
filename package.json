@@ -7,6 +7,10 @@
   "scripts": {
     "deploy": "npx fathym git && npm version patch && npm publish --access public --tag thinky && npx fathym git"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fathym-it/lcu-wordpress-on-azure-app-service.git"
+  },
   "keywords": [
     "wordpress",
     "lowcodeunit",
