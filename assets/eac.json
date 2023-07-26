@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "alfresco-admin": {
+    "wordpress-site": {
       "Application": {
         "Description": "Wordpress Site",
         "Name": "Wordpress Site"
