@@ -4,7 +4,7 @@
     "Prompts": [
       {
         "Type": "eac:projects|select",
-        "Message": "Choose the project to deploy the Alfresco Starter to?",
+        "Message": "Choose the project to deploy the Wordpress Launch Pad to?",
         "Arguments": {
           "CreateText": "Create a project"
         }

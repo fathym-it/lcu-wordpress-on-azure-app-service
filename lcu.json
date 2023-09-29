@@ -1,6 +1,6 @@
 {
   "Package": {
-    "Name": "Wordpress on Azure App Service",
+    "Name": "Wordpress Launch Pad",
     "Description": "An LCU for installing Wordpress into an Azure App Service.",
     "Image": "https://s.w.org/about/images/logos/wordpress-logo-stacked-rgb.png",
     "PreviewImage": "https://s.w.org/about/images/logos/wordpress-logo-stacked-rgb.png",
@@ -13,11 +13,11 @@
   },
   "Configurations": {
     "Full": {
-      "Name": "Wordpress on Azure App Service",
+      "Name": "Wordpress Launch Pad",
       "Description": "An LCU for installing Wordpress into an Azure App Service.",
       "Phases": [
         {
-          "Name": "Setup Wordpress on Azure App Service",
+          "Name": "Setting Up Wordpress Launch Pad",
           "Order": 1,
           "Asset": "wordpress"
         }

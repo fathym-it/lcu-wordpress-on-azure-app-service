@@ -118,7 +118,11 @@
       "ApplicationLookups": [
         "{{$1}}-wordpress-site",
         "{{$2}}-gatsby-starter"
-      ]
+      ],
+      "Details": {
+        "Name": "{{Package.Package.Name}}",
+        "Description": "{{Package.Package.Description}}"
+      }
     }
   }
 }
